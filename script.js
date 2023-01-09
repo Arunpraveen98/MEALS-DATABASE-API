@@ -11,13 +11,13 @@ async function mealDatabase() {
     //To empty the previous data when next data include.
     let div_row = document.getElementById("row-content");
     div_row.innerHTML = "";
-    
+
     //To get the Meal Database data.
     var mealData = await fetch(
       `https://www.themealdb.com/api/json/v1/1/search.php?f=${input_value}`
     );
     var JsonFormat = await mealData.json();
-   
+
     //Dynamically get the Meals data.
     for (var i = 0; i < 10; i++) {
       let mealName = JsonFormat.meals[i].strMeal;
@@ -61,7 +61,7 @@ async function mealDatabase() {
       let mealIngredient_9 = JsonFormat.meals[i].strIngredient9;
       let ingri_quantity_9 = JsonFormat.meals[i].strMeasure9;
 
-       //appending the meals data in HTML document.
+      //appending the meals data in HTML document.
       let div_row = document.getElementById("row-content");
 
       div_row.innerHTML += `
@@ -101,7 +101,7 @@ async function mealDatabase() {
       </div>
 
       <div class="img-card">
-        <div class="col-lg-12 text-center">
+        <div>
           <h3 class="animate-charcter" id="title">${mealName}</h3>
         </div>
         <div class="card right-card">
@@ -110,7 +110,7 @@ async function mealDatabase() {
             <img src="you.png" class="youtube-logo" alt="Meal-Type" />
             <a href="${mealYoutube}"
               ><br />
-              <button class="glow-button" type="button">VIDEO-LINK</button>
+              <button class="glow-button link" type="button">VIDEO-LINK</button>
             </a>
           </div>
           <span class="description">DESCRIPTION:</span>
@@ -120,9 +120,8 @@ async function mealDatabase() {
     </div>
     `;
     }
-  } 
-  //catch-block:-
-  catch (error) {
+  } catch (error) {
+    //catch-block:-
     console.log(error);
   }
 }

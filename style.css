@@ -76,7 +76,37 @@ body {
   font-size: 14px;
   cursor: pointer;
 }
+/* ------------------------------------------------------------- */
+@media only screen and (max-width: 720px) {
+  #meal-db {
+    position: relative;
+    width: 250px;
+    height: 50px;
+  }
+  .input-field {
+    position: relative;
+    bottom: 1.3cm;
+  }
 
+  .input-field button {
+    position: relative;
+    top: 3px;
+    left: 2.5cm;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .btn1 {
+    align-items: center;
+    position: relative;
+    bottom: 3px;
+    height: 44px;
+    width: 44px;
+    background-color: #3252d1;
+  }
+}
+/* ------------------------------------------------------------- */
 .left-card {
   height: 22cm;
   background-color: rgb(255, 254, 252);
@@ -142,7 +172,6 @@ body {
 
 .ingridient {
   text-align: center;
-
   background-color: lightgray;
   padding: 5px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -185,7 +214,81 @@ ul {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 10px;
 }
+/* ------------------------------------------------------------- */
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .details-card {
+    position: relative;
+    margin-bottom: 100px;
+    margin-right: 20px;
+    padding-bottom: 1cm;
+    padding-right: 12cm;
+  }
 
+  .left-card {
+    height: 22cm;
+    margin-top: 50px;
+  }
+
+  .right-card {
+    padding: 25px;
+    position: relative;
+    right: 8.5cm;
+    width: 400px;
+  }
+
+  .card-img-top {
+    position: relative;
+    bottom: 15px;
+    right: 10px;
+    width: 140px;
+    height: 140px;
+    padding: 5px;
+    border: 1px solid lightslategray;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .img-card {
+    position: relative;
+    top: 1cm;
+    right: 15cm;
+    box-shadow: rgb(6, 6, 6) 0px 0.0625em 0.0625em,
+      rgb(0, 0, 0) 0px 0.125em 0.5em, rgb(0, 0, 0) 0px 0px 0px 1px;
+    width: 15cm;
+  }
+
+  .badge-info {
+    padding: 4px;
+    font-size: small;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  #title {
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    right: 9cm;
+  }
+
+  .youtube-logo {
+    width: 70px;
+    height: 60px;
+  }
+
+  .youtube {
+    position: absolute;
+    left: 170px;
+    top: 7px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.646) 0px 5px 15px;
+    padding: 10px;
+  }
+  .link {
+    font-size: 15px;
+  }
+}
+
+/* ------------------------------------------------------------- */
 .glow-button {
   width: 150px;
   height: 50px;

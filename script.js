@@ -13,13 +13,13 @@ async function mealDatabase() {
     div_row.innerHTML = "";
 
     //To get the Meal Database data.
-    var mealData = await fetch(
+    let mealData = await fetch(
       `https://www.themealdb.com/api/json/v1/1/search.php?f=${input_value}`
     );
-    var JsonFormat = await mealData.json();
+    let JsonFormat = await mealData.json();
 
     //Dynamically get the Meals data.
-    for (var i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
       let mealName = JsonFormat.meals[i].strMeal;
 
       let mealCategory = JsonFormat.meals[i].strCategory;

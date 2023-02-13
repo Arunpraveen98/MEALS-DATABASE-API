@@ -6,7 +6,7 @@ go_button.addEventListener("click", mealDatabase);
 async function mealDatabase() {
   try {
     //To get Search input value from Users.
-    let input_value = document.getElementById("meal-db").value;
+    let input_value = document.getElementById("meal-db").value.toLowerCase();
 
     //To empty the previous data when next data include.
     let div_row = document.getElementById("row-content");
